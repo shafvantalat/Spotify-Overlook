@@ -1,0 +1,29 @@
+[
+   {
+      "id": 1,
+      "priority": 1,
+      "action": { "type": "block" },
+      "condition": {
+         "urlFilter": "*audio-ak-spotify-com.akamaized.net*",
+         "resourceTypes": ["media", "xmlhttprequest", "other"]
+      }
+   },
+   {
+      "id": 2,
+      "priority": 1,
+      "action": { "type": "block" },
+      "condition": {
+         "urlFilter": "*googlesyndication.com*",
+         "resourceTypes": ["script", "image", "media", "xmlhttprequest", "sub_frame", "other"]
+      }
+   },
+   {
+      "id": 3,
+      "priority": 1,
+      "action": { "type": "block" },
+      "condition": {
+         "urlFilter": "*audio-akp-quic-spotify-com.akamaized.net*",
+         "resourceTypes": ["media", "xmlhttprequest", "other"]
+      }
+   }
+]

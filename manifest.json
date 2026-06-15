@@ -1,22 +1,35 @@
 {
-
-   "background": {
-      "scripts": [ "js/background.js" ]
-      
-   },
-   "content_scripts": [
-      {
-        "matches": ["https://open.spotify.com/*"], 
-        "css" : ["style.css"]
-      }
-  ],
-
-   "description": "Spotify Crack!",
+   "manifest_version": 3,
+   "name": "Spotify Mod",
+   "version": "1.0",
+   "description": "Removes ads and premium upgrade button on Spotify Web.",
    "icons": {
       "128": "img/icon.png"
    },
-   "manifest_version": 2,
-   "name": "Spotify Crack",
-   "permissions": [ "webRequest", "webRequestBlocking", "*://open.spotify.com/*", "*://audio-ak-spotify-com.akamaized.net/*", "https://*.googlesyndication.com/*", "*://audio-akp-quic-spotify-com.akamaized.net/*", "*://gae-spclient.spotify.com/*" ],
-   "version": "1.0"
+   "background": {
+      "service_worker": "js/background.js"
+   },
+   "content_scripts": [
+      {
+         "matches": ["https://open.spotify.com/*"],
+         "css": ["style.css"]
+      }
+   ],
+   "permissions": ["declarativeNetRequest"],
+   "host_permissions": [
+      "*://open.spotify.com/*",
+      "*://audio-ak-spotify-com.akamaized.net/*",
+      "*://*.googlesyndication.com/*",
+      "*://audio-akp-quic-spotify-com.akamaized.net/*",
+      "*://gae-spclient.spotify.com/*"
+   ],
+   "declarative_net_request": {
+      "rule_resources": [
+         {
+            "id": "ruleset_1",
+            "enabled": true,
+            "path": "rules.json"
+         }
+      ]
+   }
 }
