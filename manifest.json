@@ -6,9 +6,6 @@
    "icons": {
       "128": "img/icon.png"
    },
-   "background": {
-      "service_worker": "js/background.js"
-   },
    "content_scripts": [
       {
          "matches": ["https://open.spotify.com/*"],
