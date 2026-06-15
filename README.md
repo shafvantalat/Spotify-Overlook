@@ -2,7 +2,7 @@
 
 > A lightweight Chrome extension that removes ads and hides the upgrade prompt on the Spotify Web Player.
 
-![Spotify Web Player Preview](img/screenshot.png)
+![Spotify Web Player Preview](img/image.png)
 
 ---
 
